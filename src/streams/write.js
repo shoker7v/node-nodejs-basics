@@ -1,11 +1,12 @@
 import { createWriteStream } from 'fs';
 
-const write = async (path) => {
+export const write = async (path) => {
+    
     let writer = createWriteStream(path);
 
-    process.stdin.on("data", data => {
-        writer.write(data);
+    process.stdin.on("data", chunk => {
+        writer.write(chunk);
     })
 };
 
-await write('./files/fileToWrite.txt');
+// await write('./files/fileToWrite.txt');
