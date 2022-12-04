@@ -18,4 +18,4 @@ const performCalculations = async () => {
 
 };
 
-await performCalculations(10);
+await performCalculations();
