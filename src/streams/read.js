@@ -1,6 +1,6 @@
 import { createReadStream } from 'fs';
 
-const read = async (path) => {
+export const read = async (path) => {
 
     let reader = createReadStream(path);
 
@@ -9,4 +9,4 @@ const read = async (path) => {
     });
 };
 
-await read('./files/fileToRead.txt');
+// await read('./files/fileToRead.txt');
